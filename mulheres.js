@@ -13,7 +13,7 @@ const app = express(); // dando valor de aplicativo e criando o processo da api
 app.use(express.json()); // requisição sendo mandada em json agora
 app.use(cors) // requisição do cors
 // porta do projeto
-const porta = 3333
+const porta = process.env.PORT || 3333;
 
 // Get - pegar a lista e mostra na tela
 app.get('/mulheres', async (request, response) => {
@@ -75,7 +75,6 @@ app.delete('/mulheres/:id', async (request, response) => {
 });
 
 // Porta
-function mostraPorta() {
-    console.log('Servidor criado e rodando na porta', porta);
-}
-app.listen(porta, mostraPorta)
+app.listen(porta, () => {
+    console.log('Servidor criado e rodando na porta', porta)
+})
