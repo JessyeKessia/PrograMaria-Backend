@@ -5,6 +5,7 @@
   "main": "oi.js",
   "type": "module",
   "scripts": {
+    "start": "node mulheres.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
