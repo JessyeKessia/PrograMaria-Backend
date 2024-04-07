@@ -11,7 +11,7 @@ conectBancoDeDados() // chamando a função
 const router = express.Router(); //Configurando a rota
 const app = express(); // dando valor de aplicativo e criando o processo da api
 app.use(express.json()); // requisição sendo mandada em json agora
-app.use(cors) // requisição do cors
+app.use(cors()) // requisição do cors
 // porta do projeto
 const porta = process.env.PORT || 3333;
 
